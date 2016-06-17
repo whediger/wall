@@ -1,2 +1,15 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+
+{{#each post}}
+  <div class="postcontainer">
+    <p>
+      here is some stuff
+    </p>
+    <h2>{{this.title}}</h2>
+    <img src='{{this.image}}' alt="image for {{this.title}}"/>
+    <p>
+      {{this.description}}
+    </p>
+    <a href="/delete">delete this post</a>
+  </div>
+{{/each}}
