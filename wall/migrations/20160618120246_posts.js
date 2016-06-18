@@ -2,7 +2,7 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('posts', function(table){
       table.increments();
-      table.string('date');
+      table.timestamp('date').defaultTo(knex.fn.now());
       table.string('title');
       table.string('image_url');
       table.string('article');
