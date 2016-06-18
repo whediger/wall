@@ -1,13 +1,11 @@
 // Update with your config settings.
-require('dotenv').config();
+require('dotenv').load();
 
 module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgress://localhost/wall_db'
-    }
+    connection: 'postgress://localhost/the_wall'
   },
 
   production: {
