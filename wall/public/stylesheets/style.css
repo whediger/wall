@@ -6,3 +6,51 @@ body {
 a {
   color: #00B7FF;
 }
+
+.createUser {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.createUser input {
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 3px;
+    line-height: 1.5;
+}
+
+.createUser button {
+  margin: 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.createUser button:hover {
+  cursor: pointer;
+}
+
+.createPost {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.createPost input, .createPost textarea {
+  margin: 10px;
+  border: solid 1px black;
+  border-radius: 3px;
+  line-height: 1.5;
+}
+
+.createPost button {
+  margin: 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.createPost button:hover {
+  cursor: pointer;
+}
