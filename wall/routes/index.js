@@ -4,7 +4,9 @@ var knex = require('../db/knex');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index');
+  knex('posts').select().then(function(posts){
+    res.render('index', { list:posts });
+  })
 });
 
 router.get('/create_post', function(req, res, next){
