@@ -1,13 +1,17 @@
 
-
-{{#each list}}
-  <div class="postcontainer">
-    <h2>{{this.title}}</h2>
-    <h3>posted by: {{this.name}} <br> {{this.date}}</h3>
-    <img class="postImage" src='{{this.image_url}}' alt="image for {{this.title}}"/>
-    <p>
-      {{this.article}}
-    </p>
-    <a href="/delete">delete this post</a>
-  </div>
-{{/each}}
+<div class="postcontainer">
+    {{#each list}}
+      <article>
+        <header>
+            <h2>{{this.title}}</h2>
+            <h3>posted by: {{this.name}} <br> {{this.date}}</h3>
+        </header>
+        <img class="postImage" src='{{this.image_url}}' alt="image for {{this.title}}"/>
+        <p>
+          {{this.article}}
+        </p>
+        <h3>Contact: {{this.email}}</h3>
+        <a href="/delete">delete this post</a>
+      </article>
+    {{/each}}
+</div>

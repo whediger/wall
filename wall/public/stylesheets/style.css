@@ -55,7 +55,11 @@ a {
   cursor: pointer;
 }
 
-.postcontainer{
+.postcontainer {
+  display: flex;
+  flex-direction: row;
+}
+article {
   width: 310px;
 
 }
