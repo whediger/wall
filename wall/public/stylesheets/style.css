@@ -1,6 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/wall.jpeg');
+}
+
+header {
+  background-color: #1A3652;
+  color: white;
 }
 
 a {
@@ -58,13 +64,21 @@ a {
 .postcontainer {
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
 }
 article {
   width: 310px;
+  margin: 10px;
+  background-color: #F7DDC3;
+  border: solid black 2px;
+  border-radius: 10px;
 
 }
 
 .postImage {
+  display: block;
   height: 200px;
   width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
