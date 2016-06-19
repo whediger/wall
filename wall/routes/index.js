@@ -4,7 +4,11 @@ var knex = require('../db/knex');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  knex('posts').select().then(function(posts){
+  knex('posts')
+  .join('posts_users', 'posts.id', '=', 'posts_users.post_id')
+  .join('users', 'posts_users.user_id', '=', 'users.id')
+  .select().then(function(posts){
+    console.log(posts);
     res.render('index', { list:posts });
   })
 });

@@ -3,6 +3,7 @@
 {{#each list}}
   <div class="postcontainer">
     <h2>{{this.title}}</h2>
+    <h3>posted by: {{this.name}} <br> {{this.date}}</h3>
     <img class="postImage" src='{{this.image_url}}' alt="image for {{this.title}}"/>
     <p>
       {{this.article}}
