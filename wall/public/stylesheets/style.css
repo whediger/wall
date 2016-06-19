@@ -54,3 +54,13 @@ a {
 .createPost button:hover {
   cursor: pointer;
 }
+
+.postcontainer{
+  width: 310px;
+
+}
+
+.postImage {
+  height: 200px;
+  width: 300px;
+}

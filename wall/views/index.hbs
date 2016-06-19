@@ -3,10 +3,10 @@
 {{#each list}}
   <div class="postcontainer">
     <h2>{{this.title}}</h2>
-    <!-- <img src='{{this.image}}' alt="image for {{this.title}}"/>
+    <img class="postImage" src='{{this.image_url}}' alt="image for {{this.title}}"/>
     <p>
-      {{this.description}}
+      {{this.article}}
     </p>
-    <a href="/delete">delete this post</a> -->
+    <a href="/delete">delete this post</a>
   </div>
 {{/each}}
