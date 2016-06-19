@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
       table.timestamp('date').defaultTo(knex.fn.now());
       table.string('title');
       table.string('image_url');
-      table.string('article');
+      table.text('article');
     })
 };
 
