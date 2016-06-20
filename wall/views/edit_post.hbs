@@ -1,9 +1,12 @@
 
 
-<form class="createPost" action="/edit_post/:id" method="post">
+<form class="createPost" action="/edit_post/{{this.post_id}}" method="post">
   <h2>Edit Post by: {{this.name}}</h2>
-  <input type="text" name="title" placeholder="Post Title">
-  <input type="text" name="image_url" placeholder="html image link">
-  <textarea name="article" rows="8" cols="40"></textarea>
-  <button type="submit">post</button>
+  <input type="text" name="title" placeholder="Post Title" value="{{this.title}}">
+  <input type="text" name="image_url" placeholder="html image link" value="{{this.image_url}}">
+  <textarea name="article" rows="8" cols="40">{{this.article}}</textarea>
+  <button type="submit">save changes</button>
+</form>
+<form class="deletePost" action="/delete_post/{{this.post_id}}" method="post">
+  <button type="submit">Delete this post</button>
 </form>

@@ -21,12 +21,12 @@ router.post('/', function(req, res, next) {
   })
 });
 
-router.get('/:id/edit_post', function(req, res, next) {
-  res.render('edit_post');
-  // knex('posts')
-  // .where('post_id', '=', req.body.post_id )
-  // .then(funciton())
-});
+// router.get('/:id/edit_post', function(req, res, next) {
+//   res.render('edit_post');
+//   // knex('posts')
+//   // .where('post_id', '=', req.body.post_id )
+//   // .then(funciton())
+// });
 
 router.get('/create_post', function(req, res, next){
   knex('users')
