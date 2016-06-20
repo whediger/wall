@@ -16,7 +16,6 @@ router.get('/create_post', function(req, res, next){
   knex('users')
   .select()
   .then(function(users){
-    console.log(users);
     res.render('create_post', { list:users });
   })
 });

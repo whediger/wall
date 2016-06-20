@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
 
     var users = data[0];
     var posts = data[1];
-    
+
     return Promise.all([
       knex('posts_users').insert({user_id: findIdByName.findIdByName(users, "Joe Blow"), post_id: findIdByName.findIdByName(posts, "great stuff")}),
       knex('posts_users').insert({user_id: findIdByName.findIdByName(users, "Sally Mae"), post_id: findIdByName.findIdByName(posts, "more stuff")}),
@@ -26,10 +26,10 @@ exports.seed = function(knex, Promise) {
     return knex("posts")
       .select(["users.name as User", "posts.title as Posts"])
       .join("posts_users", function () {
-        this.on("posts_users.post_id", "=", "posts.id")
+        this.on("posts_users.post_id", "=", "posts.posts_id")
       })
       .join("users", function () {
-        this.on("posts_users.user_id", "=", "users.id")
+        this.on("posts_users.user_id", "=", "users.users_id")
       })
       // .where("host.name", "=", "cat")
       .then(function (joinedTable) {

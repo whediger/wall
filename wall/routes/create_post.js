@@ -5,11 +5,19 @@ var knex = require('../db/knex');
 /* GET home page. */
 router.get('/', function(req, res, next){
     res.render('index');
-  
+
 });
 
 router.post('/', function(req, res, next){
-  res.render('index');
+  knex('posts')
+  .join('posts_users')
+  .insert(req.body)
+  .then(function(data){
+    console.log(data);
+
+  })
+      res.redirect('/');
+
 });
 
 module.exports = router;
