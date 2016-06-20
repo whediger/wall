@@ -7,6 +7,6 @@
   <textarea name="article" rows="8" cols="40">{{this.article}}</textarea>
   <button type="submit">save changes</button>
 </form>
-<form class="deletePost" action="/delete_post/{{this.post_id}}" method="post">
+<form class="deletePost" action="/edit_post/delete_post/{{this.post_id}}" method="get">
   <button class="deleteButton" type="submit">Delete this post</button>
 </form>

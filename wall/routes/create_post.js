@@ -29,8 +29,8 @@ router.post('/', function(req, res, next){
     //console.log(data);
     res.redirect('/');
   })
-
-
 });
+
+
 
 module.exports = router;

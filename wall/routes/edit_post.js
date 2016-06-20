@@ -17,9 +17,18 @@ router.post('/:id', function(req, res, next){
     .where('posts_id', '=', req.params.id)
     .update(req.body)
       .then(function(){
-        console.log(req.params.id);
         res.redirect('/')
       })
+})
+
+router.get('/delete_post/:id', function(req, res, next){
+    return knex('posts')
+    .where('posts_id', '=', req.params.id)
+    .del()
+    .then(function(){
+      res.redirect('/')
+    })
+    
 })
 
 module.exports = router;
