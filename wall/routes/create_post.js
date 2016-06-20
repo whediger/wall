@@ -10,7 +10,6 @@ router.get('/', function(req, res, next){
 
 router.post('/', function(req, res, next){
   knex('posts')
-  .join('posts_users')
   .insert(req.body)
   .then(function(data){
     console.log(data);
