@@ -61,6 +61,11 @@ a {
   cursor: pointer;
 }
 
+.deleteButton {
+  background-color: red;
+  color: white;
+}
+
 .postcontainer {
   display: flex;
   flex-direction: row;
