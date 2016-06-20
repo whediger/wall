@@ -8,13 +8,17 @@ router.get('/', function(req, res, next) {
   .join('posts_users', 'posts.id', '=', 'posts_users.post_id')
   .join('users', 'posts_users.user_id', '=', 'users.id')
   .select().then(function(posts){
-    console.log(posts);
     res.render('index', { list:posts });
   })
 });
 
 router.get('/create_post', function(req, res, next){
-    res.render('create_post');
+  knex('users')
+  .select()
+  .then(function(users){
+    console.log(users);
+    res.render('create_post', { list:users });
+  })
 });
 
 router.get('/new_user', function(req, res, next){
