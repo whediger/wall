@@ -1,6 +1,7 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('posts_users', function(table){
+      table.increments('posts_users_id');
       table.integer('user_id').references('users.users_id').onDelete('CASCADE');
       table.integer('post_id').references('posts.posts_id').onDelete('CASCADE');
     })

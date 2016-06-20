@@ -8,10 +8,12 @@
         </header>
         <img class="postImage" src='{{this.image_url}}' alt="image for {{this.title}}"/>
         <p>
-          {{this.article}}
+            {{this.article}}
         </p>
         <h3>Contact: {{this.email}}</h3>
-        <a href="/delete">delete this post</a>
+        <div class="edit_button">
+            <a href="/edit_post/{{this.post_id}}">Edit</a>
+        </div>
       </article>
     {{/each}}
 </div>
