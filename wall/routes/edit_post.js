@@ -28,7 +28,7 @@ router.get('/delete_post/:id', function(req, res, next){
     .then(function(){
       res.redirect('/')
     })
-    
+
 })
 
 module.exports = router;
